@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання 3 - Форма</title>
+</head>
+<body>
+    <header style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+        <h1>Форма</h1>
+        <a href="index.html" style="color: #fff;">Ha головну</a>
+        <p>Козімова Ріана</p>
+        <p>KH 32</p>
+        <p>5</p>
+    </header>
+
+    <main>
+        <h2>Форма взаємодії для додавання фільму до БД</h2>
+        <form action="process_form.php" method="post" enctype="multipart/form-data">
+            <label for="movieName">Назва фільму:</label>
+            <input type="text" id="movieName" name="movieName" required><br><br>
+
+            <label for="genre">Жанр:</label>
+            <select id="genre" name="genre" required>
+                <option value="драма">Драма</option>
+                <option value="комедія">Комедія</option>
+                <option value="жахи">Жахи</option>
+            </select><br><br>
+
+            <label for="releaseDate">Дата виходу на екрани:</label>
+            <input type="date" id="releaseDate" name="releaseDate" required><br><br>
+
+            <label for="description">Опис фільму:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="moviePoster">Картинка з афішою:</label>
+            <input type="file" id="moviePoster" name="moviePoster" accept="image/*" required><br><br>
+
+            <h3>Дані про режисера</h3>
+            <label for="directorName">ПІБ режисера:</label>
+            <input type="text" id="directorName" name="directorName" required><br><br>
+
+            <label for="birthDate">Дата народження режисера:</label>
+            <input type="date" id="birthDate" name="birthDate" required><br><br>
+
+            <label for="biography">Біографія режисера:</label><br>
+            <textarea id="biography" name="biography" rows="4" cols="50" required></textarea><br><br>
+
+            <label for="website">Посилання на веб-сайт режисера:</label>
+            <input type="url" id="website" name="website"><br><br>
+
+            <input type="submit" value="Додати фільм" style="font-size: 1.5em; padding: 10px 20px;">        
+        </form>
+    </main>
+</body>
+</html>
